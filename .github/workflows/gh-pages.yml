@@ -28,10 +28,13 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        #if: ${{ github.ref == 'refs/heads/main' }}
         with:
           external_repository: imxiangpeng/imxiangpeng.github.io
           personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}
           #github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: main
+          user_name: 'Alex Meng'
+          user_email: imxiangpeng@gmail.com
 
